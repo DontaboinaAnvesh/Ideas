@@ -1,0 +1,134 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif; /* Use Open Sans */
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    height: 97vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 110vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+
+.intro-section, .idea-section {
+    padding: 8rem;
+    border-radius: 8px; /* Slightly rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro-section {
+    background: linear-gradient(135deg, #e0e0e0, #b0bec5); /* Gradient background */
+}
+
+.idea-section {
+    background: linear-gradient(135deg, #e0e0e0, #b0bec5); /* Gradient background */
+    animation: slideUp 1.2s ease-out; /* Slide-up animation */
+}
+
+/* Hover effect to make the section pop */
+.idea-section:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Styling for h3 tag in the idea section */
+.idea-section h3 {
+    font-size: 3rem; /* Increase font size for more impact */
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #37474f; /* Darker color for better contrast */
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+/* Additional styles for intro-section paragraph animation */
+.intro-section p {
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans */
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #455a64; /* Soft gray color */
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 600px; /* Limit the width of the paragraph */
+    animation: fadeIn 2s ease-in-out; /* Apply fade-in animation */
+}
+
+/* Styling for the paragraph tag in the idea section */
+.idea-section p {
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans */
+    font-size: 1.2rem;
+    font-weight: normal;
+    color: #455a64; /* Soft gray color */
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+    max-width: 600px; /* Limit the width of the paragraph */
+    animation: fadeIn 1.8s ease-in-out; /* Apply fade-in animation */
+}
+
+.submit-idea-button {
+    background-color: #007bff; /* Blue background color */
+    color: #ffffff; /* White text color */
+    border: none; /* No border */
+    padding: 0.75rem 1.5rem; /* Padding for button size */
+    font-size: 1rem; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    animation: pulse 2s infinite; /* Pulsing animation */
+}
+
+/* Hover effect for the button */
+.submit-idea-button:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+    transform: translateY(-3px); /* Slight lift effect on hover */
+}
+
+/* Keyframe animation for pulsing effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .intro-section p {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        margin-bottom: 1.5rem; /* Adjust margin for smaller screens */
+    }
+    
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        margin-bottom: 1rem; /* Adjusted margin for smaller screens */
+    }
+}
